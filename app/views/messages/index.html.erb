@@ -14,7 +14,7 @@
 <div class="form-group">
     <label class="col-sm-2 control-label">学籍番号：</label>
     <div class="col-sm-10">
-        <%= f.text_field :id %>
+        <%= f.text_field :gakuseki %>
     </div>
 </div>
 
@@ -49,7 +49,7 @@
 
   <div class="panel-heading">
     <% @messages.each do |message| %>
-    <%= message.id %>
+    <%= message.gakuseki %>
     <span class="label label-info"><%= message.name %></span>
     <%= message.body %>
     <br/>
