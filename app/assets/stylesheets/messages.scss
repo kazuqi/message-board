@@ -1,3 +1,16 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+li{
+    border-top: dotted 1px #CCC;
+    margin-left: 0px;
+    list-style-type: none;
+}
+li:first-child{
+    border-top: none;
+}
+
+#panel-margin{
+    margin-bottom:0;
+}

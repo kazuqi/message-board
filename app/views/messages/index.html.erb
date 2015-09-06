@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+ <div class="panel panel-default">
     
   <!-- 16:9 aspect ratio -->
 <div class="embed-responsive embed-responsive-16by9">
@@ -36,20 +36,22 @@
 <% end %>
 
 
-  <div class="panel panel-primary">
+  <div id="panel-margin" class="panel panel-primary">
   <div class="panel-heading">
       <h3 class="panel-title">メッセージ一覧</h3>
   </div>
   </div>
 
   <div class="panel-heading">
-    <% @messages.each do |message| %>
-    <%= message.id %>  <%# gakuseki %> 
-    <span class="label label-info"><%= message.name %></span>
-    <%= message.body %>
-    <br/>
-    <hr>
-    <% end %>
+      <ul>
+          <% @messages.each do |message| %>
+          <li>
+              <%= message.id %>  <%# gakuseki %> 
+              <span class="label label-info"><%= message.name %></span>
+              <%= message.body %>
+          </li>
+          <% end %>
+       </ul>
   </div>
 </div>
 
