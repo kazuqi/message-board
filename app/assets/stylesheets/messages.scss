@@ -6,3 +6,17 @@
   display: inline-block;
   border: 1px solid #f00;
 }
+
+li{
+    border-top: dotted 1px #CCC;
+    margin-left: 0px;
+    list-style-type: none;
+}
+li:first-child{
+    border-top: none;
+}
+
+#panel-margin{
+    margin-bottom:0;
+}
+
