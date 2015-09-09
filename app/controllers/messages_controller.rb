@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   ## ここから追記
   
   def destroy
-    @message.destory
+    @message.destroy
     redirect_to root_path, notice: 'メッセージを削除しました'
   end
   
