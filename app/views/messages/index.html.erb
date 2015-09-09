@@ -1,17 +1,29 @@
- <div class="panel panel-default">
+<div class="panel panel-default">
     
-  <!-- 16:9 aspect ratio -->
+<!-- 16:9 aspect ratio -->
+
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lvtfD_rJ2hE"></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lvtfD_rJ2hE"></iframe>
 </div>
-
-<br />
- <h3>この動画を見て感じたことを投稿してください。</h3>
 <br />
 
-<%= form_for (Message.new) , :html => {:class => 'form-horizontal'}  do |f| %>
+<h3>この動画を見て感じたことを投稿してください。</h3>
+<br />
 
-<%# 「学籍番号」という項目を追加してみようと思ったがエラーとなったので一旦削除 %>
+<%= form_for (@message) , :html => {:class => 'form-horizontal'}  do |f| %>
+
+  <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+      <%= alert %>
+      <ul>
+        <% @message.errors.full_messages.each do |full_message| %>
+          <li>
+            <%= full_message %>
+          </li>
+        <% end %> 
+      </ul>
+    </div>
+  <% end %>
 
 <div class="form-group">
     <label class="col-sm-2 control-label">名前：</label>
