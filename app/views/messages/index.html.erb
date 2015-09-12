@@ -25,7 +25,8 @@
           <% @messages.each do |message| %>
           <li>
               <%= message.id %>  <%# gakuseki %> 
-              <span class="label label-info"><%= message.name %></span>
+              <span class="label label-info"><%= message.name %>
+            　【<%= message.age %>】</span>
               <%= message.body %>
               (<%= link_to "edit" , edit_message_path(message) %> | 
                <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
