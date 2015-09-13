@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150912152958) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "age"
-    t.integer  "studentid"
+    t.string   "studentid"
   end
 
 end
